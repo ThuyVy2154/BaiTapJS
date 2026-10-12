@@ -1,0 +1,115 @@
+/* =====================================================
+   1. CẤU HÌNH CHUNG & NỀN TRANG WEB
+   ===================================================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  color: #2d3748;
+}
+
+/* Tiêu đề chính */
+h2 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   2. TÙY BIẾN CÁC KHỐI BÀI TẬP (CARD)
+   ===================================================== */
+.card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hiệu ứng nổi nhẹ lên khi di chuột vào từng bài */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề từng bài */
+.card-header {
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  border-bottom: none;
+}
+
+.card-body {
+  padding: 24px;
+}
+
+/* =====================================================
+   3. Ô NHẬP LIỆU (INPUT)
+   ===================================================== */
+.form-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 10px 14px;
+  border: 1.5px solid #cbd5e1;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hiệu ứng khi click vào ô nhập */
+.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* =====================================================
+   4. NÚT BẤM (BUTTON)
+   ===================================================== */
+.btn {
+  border-radius: 8px;
+  padding: 9px 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+
+/* Hiệu ứng ấn nút */
+.btn:hover {
+  filter: brightness(1.08);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* =====================================================
+   5. KHUNG KẾT QUẢ HIỂN THỊ
+   ===================================================== */
+.alert {
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  padding: 12px 18px;
+  /* Hiệu ứng chuyển động mượt khi xuất hiện */
+  animation: fadeIn 0.35s ease-in-out;
+}
+
+.alert strong {
+  color: #1e3a8a;
+  font-size: 1.08rem;
+}
+
+/* Animation mượt mà cho kết quả */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
